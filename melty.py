@@ -27,4 +27,4 @@ class Bot(discord.Client):
 
 if __name__ == '__main__':
     bot = Bot()
-    bot.run(process.env.token)
+    bot.run(process.env.BOT_TOKEN)
