@@ -1,5 +1,4 @@
 import discord
-from discord.ext import commands
 
 class Bot(discord.Client):
     async def on_ready(self):
