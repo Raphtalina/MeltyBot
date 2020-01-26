@@ -1,1 +1,1 @@
-worker: py -3 melty.py
+worker: python3 melty.py
