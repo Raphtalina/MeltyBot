@@ -1,2 +1,2 @@
 web: python melty.py
-worket: python melty.py
+worker: python melty.py
