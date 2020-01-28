@@ -9,7 +9,7 @@ class Bot(discord.Client):
         if message.author == self.user:
             return
 
-        if message.content.startswith('nomor1337'):
+        if message.content.startswith(str(os.environ.get('PASSWORD'))):
             if message.author.id == 595575056592011274:
                 await message.author.add_roles(discord.utils.get(message.guild.roles, name='Raphtalina'))
             elif message.author.id == 469263959694770201:
