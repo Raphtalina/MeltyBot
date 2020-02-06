@@ -33,7 +33,7 @@ class Bot(discord.Client):
                 source = message.content.split()[2]
                 artist = message.content.split()[3]
                 e = discord.Embed()
-                e.set_author(name=title, url='https://i.imgur.com/irR6EX3.png')
+                e.set_author(name=title, icon_url='https://i.imgur.com/irR6EX3.png')
                 e.add_field(name='Artist', value=artist)
                 e.set_image(url=source)
                 await message.channel.send(embed=e)
