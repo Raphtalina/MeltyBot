@@ -44,7 +44,8 @@ class Bot(discord.Client):
 
             if message.content.startswith('.r'):
                 id = message.content.split()[1]
-                message.channel.fetch_message(id).delete()
+                msg = await message.channel.fetch_message(id)
+                await msg.delete()
 
 if __name__ == '__main__':
     bot = Bot()
