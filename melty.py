@@ -32,8 +32,7 @@ class Bot(discord.Client):
                 title = message.content.split()[1]
                 source = message.content.split()[2]
                 artist = message.content.split()[3]
-                e = discord.Embed(color=0xc28f2c)
-                e.set_author(name=', '.join(map(str, title)), icon_url='https://i.imgur.com/irR6EX3.png')
+                e = discord.Embed(title=', '.join(list(title.split(','))), color=0xc28f2c)
                 e.add_field(name='Artist', value=artist)
                 e.set_image(url=source)
                 await message.channel.send(embed=e)
