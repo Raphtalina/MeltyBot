@@ -35,7 +35,7 @@ class Bot(discord.Client):
                 e = discord.Embed()
                 e.set_author(name=title, url='https://i.imgur.com/irR6EX3.png')
                 e.add_field(name='Artist', value=artist)
-                e.set_image(image=source)
+                e.set_image(url=source)
                 await message.channel.send(embed=e)
 
 if __name__ == '__main__':
