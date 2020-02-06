@@ -42,6 +42,10 @@ class Bot(discord.Client):
                 e.set_image(url=source)
                 await message.channel.send(embed=e)
 
+            if message.content.startswith('.r'):
+                id = message.content.split()[1]
+                message.channel.fetch_message(id).delete()
+
 if __name__ == '__main__':
     bot = Bot()
     bot.run(str(os.environ.get('BOT_TOKEN')))
