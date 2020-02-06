@@ -26,6 +26,16 @@ class Bot(discord.Client):
                 await message.author.remove_roles(discord.utils.get(message.guild.roles, name='Cavamon'))
             await message.delete()
 
+        if message.content.startswith('.lolhentai'):
+            title = message.content.split()[1]
+            source = message.content.split()[2]
+            artist = message.content.split()[2]
+            e = discord.Embed()
+            e.set_author(name=title, url='https://i.imgur.com/irR6EX3.png')
+            e.add_field(name='Artist', value=artist)
+            e.set_image(image=source)
+            await message.channel.send(embed=e)
+
 if __name__ == '__main__':
     bot = Bot()
     bot.run(str(os.environ.get('BOT_TOKEN')))
