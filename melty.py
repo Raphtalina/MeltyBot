@@ -33,7 +33,7 @@ class Bot(discord.Client):
                 source = message.content.split()[2]
                 artist = message.content.split()[3]
                 test = message.content.split()[4]
-                e = discord.Embed(color=0xc28f2c)
+                e = discord.Embed(color=0x662d4b)
                 if test == '1':
                     e.add_field(name='Champion', value=title)
                 elif test == '2':
