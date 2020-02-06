@@ -32,7 +32,12 @@ class Bot(discord.Client):
                 title = message.content.split()[1]
                 source = message.content.split()[2]
                 artist = message.content.split()[3]
-                e = discord.Embed(title=', '.join(list(title.split(','))), color=0xc28f2c)
+                test = message.content.split()[4]
+                e = discord.Embed(color=0xc28f2c)
+                if test == '1':
+                    e.add_field(name='Champion', value=title)
+                elif test == '2':
+                    e.add_field(name='Champions', value=', '.join(list(title.split(','))))
                 e.add_field(name='Artist', value=artist)
                 e.set_image(url=source)
                 await message.channel.send(embed=e)
