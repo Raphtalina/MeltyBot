@@ -29,7 +29,7 @@ class Bot(discord.Client):
 
         if message.channel.id == 670998063220916234:
             if message.content.startswith('.upload'):
-                title = message.content.split()[1]
+                title = message.content.split()[1].replace('-', ' ')
                 source = message.content.split()[2]
                 model = message.content.split()[3]
                 link = message.content.split()[4]
