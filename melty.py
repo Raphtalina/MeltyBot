@@ -31,7 +31,7 @@ class Bot(discord.Client):
             if message.content.startswith('.upload'):
                 title = message.content.split()[1].replace('-', ' ')
                 source = message.content.split()[2]
-                model = message.content.split()[3]
+                model = message.content.split()[3].replace('-', ' ')
                 link = message.content.split()[4]
                 e = discord.Embed(title=title)
                 e.add_field(name='Model', value=f'[{model}]({link})')
